@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(baseContext, "${posts!!.size} posts", Toast.
                     LENGTH_LONG).show()
                     binding.rvposts.layoutManager=LinearLayoutManager(baseContext)
-                    binding.rvposts.adapter = PostRvAdapter(baseContext,posts)
+                    binding.rvposts.adapter = PostRvAdapter(posts)
                 }
             }
             override fun onFailure(call: Call<List<Post>>, t: Throwable) {
